@@ -68,7 +68,7 @@ export const ElectricityDataPage = () => {
   const handleExportCSV = () => {
     if (isVesit) {
       if (!vesitRawRecords.length) {
-        toast.info('No VESIT electricity records to export.');
+        toast.info('No BMSIT electricity records to export.');
         return;
       }
       const rows = vesitRawRecords.map((item) => ({
@@ -84,8 +84,8 @@ export const ElectricityDataPage = () => {
         Power_Factor: item.power_factor,
         Calculated_CO2e_kg: (item.units_consumed_kwh * 0.82).toFixed(2),
       }));
-      reportService.exportToCSV(`VESIT_Electricity_Dataset_${Date.now()}.csv`, rows);
-      toast.success('VESIT electricity records exported to CSV.');
+      reportService.exportToCSV(`BMSIT_Electricity_Dataset_${Date.now()}.csv`, rows);
+      toast.success('BMSIT electricity records exported to CSV.');
     } else {
       if (!electricityData.length) {
         toast.info('No electricity records to export.');
@@ -221,7 +221,7 @@ export const ElectricityDataPage = () => {
               Electricity Telemetry & Billing Ledger
             </h1>
             <Badge variant={isVesit ? 'emerald' : 'amber'}>
-              {isVesit ? 'VESIT Official Records' : 'Test Set'}
+              {isVesit ? 'BMSIT Official Records' : 'Test Set'}
             </Badge>
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
@@ -289,7 +289,7 @@ export const ElectricityDataPage = () => {
             Active Dataset Context
           </div>
           <div className="text-2xl font-black text-purple-600 dark:text-purple-400 font-mono mt-1">
-            {isVesit ? 'VESIT Campus' : `${departments.length} Zones`}
+            {isVesit ? 'BMSIT Campus' : `${departments.length} Zones`}
           </div>
           <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-mono">
             {isVesit ? '350 KVA (A) + 175 KVA (B)' : 'Multi-department demo feed'}

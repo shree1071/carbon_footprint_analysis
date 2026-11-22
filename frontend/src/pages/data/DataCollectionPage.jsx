@@ -307,7 +307,7 @@ export const DataCollectionPage = () => {
               </div>
               <div>
                 <h2 className="text-xs font-bold text-slate-900 dark:text-slate-100">
-                  VESIT Electrical Assets & Equipment Registry
+                  BMSIT Electrical Assets & Equipment Registry
                 </h2>
                 <p className="text-[11px] text-slate-600 dark:text-slate-400">
                   Audited campus equipment inventory across air conditioning, computing, lighting, and heavy loads.

@@ -11,14 +11,14 @@ An enterprise-grade, AI-driven carbon accounting and sustainability intelligence
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Automated Multi-Scope Carbon Accounting**:
   - **Scope 1 (Direct)**: On-campus fuel combustion, generator activity, institutional transport.
   - **Scope 2 (Indirect - Energy)**: High-resolution electricity consumption tracking, power factor metrics, and billing demand data.
   - **Scope 3 (Value Chain)**: Commuter travel, municipal water supply, electronic and solid waste lifecycle.
 - **Automated Data Ingestion Engine**:
-  - Ingestion pipeline tailored for VESIT campus electricity utility bills, appliance inventory audits, and operational datasets.
+  - Ingestion pipeline tailored for BMSIT campus electricity utility bills, appliance inventory audits, and operational datasets.
   - Fault-tolerant parsing with unit conversions and automatic emission factor mappings.
 - **Dynamic Executive Sustainability Dashboard**:
   - Real-time KPIs for gross emissions ($t\text{CO}_2e$), per-capita intensity, renewable offsets, and budget expenditures.
@@ -34,7 +34,7 @@ An enterprise-grade, AI-driven carbon accounting and sustainability intelligence
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ```mermaid
 graph TD
@@ -81,7 +81,7 @@ graph TD
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 carbon_footprint_analysis/
@@ -109,7 +109,7 @@ carbon_footprint_analysis/
 │   └── vite.config.js        # Vite build configuration
 ├── database/                 # Database schema and seed assets
 │   ├── schema/init.sql       # Baseline schema definition
-│   └── data/vesit/           # Institutional audit and bill source records
+│   └── data/                 # Institutional audit and bill source records
 ├── python/                   # Data processing and batch ingestion
 │   └── ingestion/            # Pipeline scripts for utility data parsing
 └── .gitignore                # Production git ignore definitions
@@ -117,7 +117,7 @@ carbon_footprint_analysis/
 
 ---
 
-## 🚀 Quickstart & Installation
+## Quickstart & Installation
 
 ### Option 1: Docker Compose (Recommended)
 
@@ -162,7 +162,7 @@ alembic upgrade head
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-#### 2. Run Data Ingestion Pipeline (VESIT Data)
+#### 2. Run Data Ingestion Pipeline (BMSIT Data)
 
 ```bash
 # Ingest raw Excel utility bills and campus infrastructure records
@@ -187,7 +187,7 @@ The frontend will be available at:
 
 ---
 
-## 🧪 Testing & Code Quality
+## Testing & Code Quality
 
 Run backend test suite:
 ```bash
@@ -204,7 +204,7 @@ npm run lint
 
 ---
 
-## 🛡 Security & Compliance
+## Security & Compliance
 
 - **JWT Authentication**: OAuth2 Password bearer flow with role-based access control (Admin, Auditor, Department Officer).
 - **Environment Isolation**: `.env` and sensitive production secrets are strictly excluded from version control.
@@ -212,6 +212,6 @@ npm run lint
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

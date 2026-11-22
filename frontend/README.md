@@ -5,7 +5,7 @@ This is the official frontend web application for the **Smart Campus Carbon Inte
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework**: React 19 + Vite
 - **Styling**: Tailwind CSS (Tailored Emerald/Slate/Cyan Glassmorphic UI)
@@ -18,7 +18,7 @@ This is the official frontend web application for the **Smart Campus Carbon Inte
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 frontend/
@@ -77,7 +77,7 @@ frontend/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Environment Configuration
 Ensure `.env` exists in the `frontend/` directory (created automatically):
@@ -99,37 +99,12 @@ The frontend will start at **`http://localhost:5173`**.
 
 ---
 
-## 🔑 Authentication & Quick Evaluation Presets
+## Authentication & Quick Evaluation Presets
 
 The login page integrates with the backend OAuth2 form endpoint (`/api/v1/auth/login/access-token`).
 
 For rapid project evaluation, 4 pre-configured login presets are available on the login screen:
-1. **System Administrator** (`admin@example.com` / `admin123`) - Full access to create departments, register emission factors, log electricity, view analytics, and export reports.
-2. **Maintenance / Facilities Lead** - Data entry for electricity, water, waste, and transport.
-3. **Head of Department (HOD)** - Departmental emissions profile and recommendations.
-4. **Sustainability Viewer** - Read-only dashboard analytics and trends.
-
----
-
-## 🔗 Backend API Contract Mapping
-
-| Frontend Page | Backend Endpoint | Method | Backend Action |
-| :--- | :--- | :---: | :--- |
-| **Topbar Health Pulse** | `/api/v1/health` | `GET` | Verifies FastAPI gateway status |
-| **Topbar DB Pulse** | `/api/v1/health/database` | `GET` | Verifies PostgreSQL DB connectivity |
-| **Login** | `/api/v1/auth/login/access-token` | `POST` | Issues JWT Bearer access token |
-| **Dashboard KPIs & Charts** | `/api/v1/analytics/dashboard` | `GET` | Scope breakdown & department ranking |
-| **Departments** | `/api/v1/departments/` | `GET` | Lists registered campus departments |
-| **Add Department** | `/api/v1/departments/` | `POST` | Inserts new department (Admin) |
-| **Electricity History** | `/api/v1/electricity/` | `GET` | Fetches activity records |
-| **Record Electricity** | `/api/v1/electricity/` | `POST` | Synchronously computes Scope 2 carbon |
-| **Emission Factors** | `/api/v1/emission-factors/` | `GET` | Fetches active carbon factors |
-| **Add Emission Factor** | `/api/v1/emission-factors/` | `POST` | Registers new coefficient (Admin) |
-
----
-
-## 🔒 Security Practices
-- No PostgreSQL or backend secrets are exposed in the client.
-- JWT Bearer tokens are attached dynamically via Axios interceptor.
-- Automatic session termination and clean redirect upon 401 Unauthorized responses.
-- Backend authorization (`RoleChecker`) remains the authoritative security boundary.
+1. **System Administrator** (`admin@bmsit.in` / `admin123`) - Full access to create departments, register emission factors, log electricity, view analytics, and export reports.
+2. **Maintenance / Facilities Lead** (`maintenance@bmsit.in` / `admin123`) - Data entry for electricity, water, waste, and transport.
+3. **Head of Department (HOD)** (`hod@bmsit.in` / `admin123`) - Departmental emissions profile and recommendations.
+4. **Sustainability Viewer** (`viewer@bmsit.in` / `admin123`) - Read-only dashboard analytics and trends.

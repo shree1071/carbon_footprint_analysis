@@ -43,7 +43,7 @@ export const RecommendationsPage = () => {
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-slate-100 tracking-tight">
               Prescriptive Sustainability Recommendations
             </h1>
-            <Badge variant="emerald">VESIT Decarbonization Advisory</Badge>
+            <Badge variant="emerald">BMSIT Decarbonization Advisory</Badge>
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
             Data-backed interventions customized to campus infrastructure, high-tonnage HVAC systems, and student facilities.

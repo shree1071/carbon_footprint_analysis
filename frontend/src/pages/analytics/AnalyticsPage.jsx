@@ -79,7 +79,7 @@ export const AnalyticsPage = () => {
         CO2e_kg: h.total_co2e,
         Amount_INR: h.total_amount,
       }));
-      reportService.exportToCSV(`VESIT_Analytics_Export_${Date.now()}.csv`, rows);
+      reportService.exportToCSV(`BMSIT_Analytics_Export_${Date.now()}.csv`, rows);
       toast.success('Analytics dataset exported to CSV.');
     } else {
       const rows = [

@@ -130,7 +130,7 @@ export const DashboardPage = () => {
                 </span>
               </div>
               <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-slate-100 mt-2 tracking-tight">
-                V.E.S. Institute of Technology (VESIT)
+                B.M.S. Institute of Technology & Management (BMSIT)
               </h1>
               <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 max-w-2xl leading-relaxed">
                 Official Carbon Accounting & Scope 2 Energy Telemetry. Ingested from verified MSEDCL/Tata Power utility records across A Wing (350 KVA Contract Demand), B Wing (175 KVA Demand), and campus infrastructure.
@@ -198,7 +198,7 @@ export const DashboardPage = () => {
             <div>
               <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                VESIT Annual Carbon & Electricity Evolution (2022–2026)
+                BMSIT Annual Carbon & Electricity Evolution (2022–2026)
               </h2>
               <p className="text-[11px] text-slate-500 dark:text-slate-400">
                 Year-over-Year consumption shifts, grid expenditures, and calculated emissions.
@@ -297,7 +297,7 @@ export const DashboardPage = () => {
               <div>
                 <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                   <Layers className="w-4 h-4 text-sky-600 dark:text-sky-400" />
-                  VESIT Electrical Asset & Appliance Inventory
+                  BMSIT Electrical Asset & Appliance Inventory
                 </h2>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">
                   {vesitAppliances.total_equipment_count?.toLocaleString()} Monitored Electrical Devices across Campus
@@ -367,7 +367,7 @@ export const DashboardPage = () => {
           <div className="lg:col-span-2 card-surface p-5">
             <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
               <div>
-                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">Latest VESIT Electricity Records</h3>
+                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">Latest BMSIT Electricity Records</h3>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">Verified monthly invoices with calculated Scope 2 CO₂e</p>
               </div>
               <NavLink
@@ -416,7 +416,7 @@ export const DashboardPage = () => {
                 Decarbonization Advisory
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                Tailored efficiency strategies for VESIT's 308 AC units, 1,400 lab PCs, and 536 fluorescent tubes with payback modeling.
+                Tailored efficiency strategies for BMSIT's 308 AC units, 1,400 lab PCs, and 536 fluorescent tubes with payback modeling.
               </p>
               <NavLink
                 to="/recommendations"

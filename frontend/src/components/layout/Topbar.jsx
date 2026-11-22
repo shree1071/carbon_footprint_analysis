@@ -83,7 +83,7 @@ export const Topbar = ({ onOpenSidebar }) => {
             </span>
             <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700" />
             <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/20 font-mono">
-              VESIT Campus
+              BMSIT Campus
             </span>
           </div>
           <p className="hidden md:block text-[11px] text-slate-500 dark:text-slate-400">
@@ -110,7 +110,7 @@ export const Topbar = ({ onOpenSidebar }) => {
               <FlaskConical className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
             )}
             <span className="hidden md:inline font-mono">
-              {isVesit ? 'VESIT Actual Data' : 'Test / Demo Data'}
+              {isVesit ? 'BMSIT Actual Data' : 'Test / Demo Data'}
             </span>
             <ChevronDown className="w-3 h-3 opacity-60" />
           </button>
@@ -139,7 +139,7 @@ export const Topbar = ({ onOpenSidebar }) => {
                   <div className="flex items-center gap-2">
                     <Building2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                     <div>
-                      <div className="font-semibold">VESIT Actual Data</div>
+                      <div className="font-semibold">BMSIT Actual Data</div>
                       <div className="text-[10px] text-slate-500 dark:text-slate-400 font-normal">
                         2022-2026 Ingested Records
                       </div>

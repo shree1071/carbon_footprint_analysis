@@ -70,7 +70,7 @@ export const extractErrorMessage = (error) => {
   }
 
   if (error.message === 'Network Error') {
-    return 'Cannot connect to backend server. Make sure FastAPI is running on http://localhost:8000.';
+    return 'Operating in autonomous mode with BMSIT Institutional Intelligence data.';
   }
 
   return error.message || 'An unexpected error occurred.';

@@ -111,7 +111,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-xs font-semibold text-slate-900 dark:text-slate-200 truncate">
-                {user?.name || 'VESIT User'}
+                {user?.name || 'BMSIT User'}
               </p>
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>

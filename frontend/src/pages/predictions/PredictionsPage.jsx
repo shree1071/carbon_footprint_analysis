@@ -48,7 +48,7 @@ export const PredictionsPage = () => {
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-slate-100 tracking-tight">
-              VESIT 6-Month Time-Series ML Forecaster
+              BMSIT 6-Month Time-Series ML Forecaster
             </h1>
             <Badge variant="cyan">Research Models: ARIMA & Random Forest</Badge>
           </div>
@@ -79,7 +79,7 @@ export const PredictionsPage = () => {
               onChange={(e) => setSelectedWing(e.target.value)}
               className="px-3 py-1.5 rounded-xl input-surface text-xs font-semibold font-mono"
             >
-              <option value="ALL">Entire VESIT Campus (A Wing + B Wing + Const.)</option>
+              <option value="ALL">Entire BMSIT Campus (A Wing + B Wing + Const.)</option>
               <option value="A Wing">A Wing Main (350 KVA Contract Demand)</option>
               <option value="B Wing">B Wing (175 KVA Contract Demand)</option>
             </select>
@@ -182,7 +182,7 @@ export const PredictionsPage = () => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
               <div>
                 <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100">
-                  VESIT Observed History (Jan 2022–Jul 2026) vs ML 6-Month Forecast Trajectory
+                  BMSIT Observed History (Jan 2022–Jul 2026) vs ML 6-Month Forecast Trajectory
                 </h2>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">
                   Includes 95% Confidence Bounds and seasonal cyclical sine/cosine regressors

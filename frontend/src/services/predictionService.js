@@ -34,7 +34,7 @@ export const predictionService = {
           name: modelSel.selected_model || 'Random Forest Regressor (Ensemble Trees)',
           short_name: modelSel.short_name || 'Random Forest',
           version: 'v2.0-Research-Paper',
-          status: 'Active (Trained on 2022-2026 VESIT Historical Electricity Data)',
+          status: 'Active (Trained on 2022-2026 BMSIT Historical Electricity Data)',
           rmse: `${modelSel.rmse_kwh || '7,537'} kWh / ${Math.round((modelSel.rmse_kwh || 7537) * 0.82)} kgCO₂e`,
           mae: `${modelSel.mae_kwh || '6,390'} kWh`,
           r2_score: modelSel.r2_score,

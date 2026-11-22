@@ -126,7 +126,7 @@ export const LoginPage = () => {
           </p>
           <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-mono">
             <Building2 className="w-3 h-3" />
-            V.E.S. Institute of Technology (VESIT)
+            B.M.S. Institute of Technology & Management (BMSIT)
           </div>
         </div>
 
@@ -173,7 +173,7 @@ export const LoginPage = () => {
                     <Mail className="w-4 h-4 text-[var(--text-secondary)] absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="email"
-                      placeholder="e.g. yourname@vesit.edu or admin@example.com"
+                      placeholder="e.g. yourname@bmsit.in or admin@example.com"
                       {...registerLogin('email', { required: 'Email address is required' })}
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl input-surface text-xs focus:outline-none"
                     />
@@ -239,31 +239,31 @@ export const LoginPage = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
-                    onClick={() => setPreset('admin@example.com', 'admin123', USER_ROLES.ADMIN)}
-                    className="p-2 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
+                    onClick={() => setPreset('admin@bmsit.in', 'admin123', USER_ROLES.ADMIN)}
+                    className="p-2.5 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
                   >
-                    ⚡ System Admin
+                    System Administrator
                   </button>
                   <button
                     type="button"
-                    onClick={() => setPreset('maintenance@vesit.edu', 'admin123', USER_ROLES.MAINTENANCE)}
-                    className="p-2 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
+                    onClick={() => setPreset('maintenance@bmsit.in', 'admin123', USER_ROLES.MAINTENANCE)}
+                    className="p-2.5 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
                   >
-                    🛠 Maintenance
+                    Facilities & Maintenance
                   </button>
                   <button
                     type="button"
-                    onClick={() => setPreset('hod@vesit.edu', 'admin123', USER_ROLES.HOD)}
-                    className="p-2 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
+                    onClick={() => setPreset('hod@bmsit.in', 'admin123', USER_ROLES.HOD)}
+                    className="p-2.5 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
                   >
-                    🎓 Dept. Head (HOD)
+                    Department Head (HOD)
                   </button>
                   <button
                     type="button"
-                    onClick={() => setPreset('viewer@vesit.edu', 'admin123', USER_ROLES.VIEWER)}
-                    className="p-2 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
+                    onClick={() => setPreset('viewer@bmsit.in', 'admin123', USER_ROLES.VIEWER)}
+                    className="p-2.5 rounded-lg elevated-surface border border-[var(--border-color)] hover:border-emerald-500 text-[11px] font-semibold text-[var(--text-primary)] text-left transition-colors truncate"
                   >
-                    📊 Auditor / Viewer
+                    Sustainability Auditor
                   </button>
                 </div>
               </div>

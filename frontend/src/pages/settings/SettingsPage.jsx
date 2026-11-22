@@ -82,7 +82,7 @@ export const SettingsPage = () => {
   ];
 
   const systemConfig = [
-    { label: 'Campus Institution', value: 'V.E.S. Institute of Technology (VESIT)' },
+    { label: 'Campus Institution', value: 'B.M.S. Institute of Technology & Management (BMSIT)' },
     { label: 'Campus Wings Monitored', value: 'A Wing (350 KVA), B Wing (175 KVA)' },
     { label: 'Grid Baseline Emission Factor', value: '0.8200 kg CO₂e / kWh (CEA Baseline v19)' },
     { label: 'GHG Accounting Protocol', value: 'GHG Protocol Corporate Standard (Scope 1, 2, 3)' },
