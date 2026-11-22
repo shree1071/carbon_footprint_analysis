@@ -1,63 +1,38 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
 import { useTheme } from '../../hooks/useTheme';
 import {
+  Calculator,
   LayoutDashboard,
-  Zap,
-  Layers,
   BarChart3,
-  Building2,
+  Zap,
   Sliders,
-  TrendingUp,
   Lightbulb,
-  Cpu,
   FileText,
-  Settings,
-  LogOut,
+  Building2,
   X,
-  Shield,
+  ShieldCheck,
 } from 'lucide-react';
 
 export const Sidebar = ({ isOpen, onClose }) => {
-  const { user, logout } = useAuth();
   const { isDark } = useTheme();
 
   const navSections = [
     {
-      label: 'Overview',
+      label: 'Core Platform',
       items: [
-        { name: 'Dashboard', path: '/', icon: LayoutDashboard, exact: true },
-        { name: 'Analytics', path: '/analytics', icon: BarChart3 },
+        { name: 'Carbon Calculator', path: '/', icon: Calculator, exact: true },
+        { name: 'BMSIT Live Telemetry', path: '/telemetry', icon: LayoutDashboard },
+        { name: 'Multi-Scope Analytics', path: '/analytics', icon: BarChart3 },
       ],
     },
     {
-      label: 'Carbon Data Collection',
+      label: 'Campus Decarbonization',
       items: [
-        { name: 'Data Hub', path: '/data', icon: Layers },
-        { name: 'Electricity Data', path: '/data/electricity', icon: Zap },
-      ],
-    },
-    {
-      label: 'Campus Governance',
-      items: [
-        { name: 'Departments', path: '/departments', icon: Building2 },
-        { name: 'Emission Factors', path: '/emission-factors', icon: Sliders },
-      ],
-    },
-    {
-      label: 'Campus Intelligence',
-      items: [
-        { name: 'Carbon Forecast', path: '/predictions', icon: TrendingUp },
-        { name: 'Recommendations', path: '/recommendations', icon: Lightbulb },
-        { name: 'Impact Simulator', path: '/simulation', icon: Cpu },
-        { name: 'ESG Reports', path: '/reports', icon: FileText },
-      ],
-    },
-    {
-      label: 'System',
-      items: [
-        { name: 'Settings & Health', path: '/settings', icon: Settings },
+        { name: 'Electricity Invoices', path: '/electricity', icon: Zap },
+        { name: 'Decarbonization Action', path: '/recommendations', icon: Lightbulb },
+        { name: 'Policy Simulator', path: '/simulation', icon: Sliders },
+        { name: 'ESG Audit Reports', path: '/reports', icon: FileText },
       ],
     },
   ];
@@ -91,7 +66,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
                 Carbon<span className="text-emerald-600 dark:text-emerald-400">IQ</span>
               </span>
               <span className="text-[10px] text-slate-500 dark:text-slate-400 block -mt-0.5 tracking-wider font-mono uppercase">
-                Smart Campus
+                Campus Intelligence
               </span>
             </div>
           </NavLink>
@@ -103,20 +78,20 @@ export const Sidebar = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* User Info Capsule */}
+        {/* Institution Badge Capsule */}
         <div className="px-4 py-3 border-b border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/40">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-500/15 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0">
-              {user?.name ? user.name.charAt(0).toUpperCase() : 'U'}
+            <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/15 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0">
+              <Building2 className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold text-slate-900 dark:text-slate-200 truncate">
-                {user?.name || 'BMSIT User'}
+              <p className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">
+                BMSIT Campus
               </p>
               <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-semibold font-mono uppercase">
-                  {user?.role || 'VIEWER'}
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-semibold font-mono">
+                  ISO 14064 GHG Active
                 </span>
               </div>
             </div>
@@ -137,7 +112,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
                   end={item.exact}
                   onClick={onClose}
                   className={({ isActive }) =>
-                    `flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
+                    `flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                       isActive
                         ? 'bg-emerald-600 text-white shadow-sm font-bold'
                         : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/60'
@@ -154,15 +129,12 @@ export const Sidebar = ({ isOpen, onClose }) => {
           ))}
         </nav>
 
-        {/* Footer Sign Out */}
+        {/* Footer Info */}
         <div className="p-3 border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/60">
-          <button
-            onClick={logout}
-            className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 border border-transparent hover:border-rose-200 dark:hover:border-rose-900/40 transition-colors"
-          >
-            <LogOut className="w-4 h-4" />
-            Sign Out
-          </button>
+          <div className="flex items-center justify-center gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
+            <span>Open Access Platform</span>
+          </div>
         </div>
       </aside>
     </>
